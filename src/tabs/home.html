@@ -166,7 +166,7 @@
                         <th>Técnico</th>
                         <th>Endereço</th>
                     </tr>
-                    <tr class="table-row">
+                    <tr class="table-row" onclick="togglePopup()">
                         <td>001</td>
                         <td>Manutenção</td>
                         <td>Pedro Campos</td>
@@ -175,7 +175,7 @@
                         <td>Júlio Ferreira</td> 
                         <td>R. Vicente Machado, 182</td>
                     </tr>
-                    <tr class="table-row">
+                    <tr class="table-row" onclick="togglePopup()">
                         <td>002</td>
                         <td>Serviço</td>
                         <td>Camila Rodrigues</td>
@@ -184,7 +184,7 @@
                         <td>Júlio Ferreira</td> 
                         <td>R. Coronel Claudio, 65</td>
                     </tr>
-                    <tr class="table-row">
+                    <tr class="table-row" onclick="togglePopup()">
                         <td>003</td>
                         <td>Manutenção</td>
                         <td>Manoel Nogueira</td>
@@ -196,6 +196,91 @@
                 </table>
             </div>
         </div>
+
+        <div id="popupOverlay" class="overlay-container">
+            <div class="popup-box">
+                
+                <div class="content-header">
+                            <p class="header-left">
+                                <span class="details-title">
+                                    Manutenção
+                                    <span class="close-popup" onclick="togglePopup()">
+                                        <i class="fa-solid fa-x"></i>
+                                    </span>
+                                </span>
+                                <span class="subtitle">
+                                    GET id
+                                    <span class="status">
+                                        GET status
+                                    </span> 
+                                </span>
+                            </p>
+                            
+                </div>
+                <div class="so-info">
+                    <span class="item-container">
+                        <span class="list-title">
+                            <i class="fa-solid fa-calendar"></i>
+                            Data e Hora
+                        </span>
+                        <span class="list-content">
+                            GET data e hora
+                        </span>
+                    </span>
+
+                    <span class="item-container">
+                        <span class="list-title">
+                            <i class="fa-solid fa-user"></i>
+                            Cliente
+                        </span>
+                        <span class="list-content">
+                            GET cliente
+                        </span>
+                        <span class="list-content">
+                            GET telefone
+                        </span>
+                        <span class="list-content">
+                            GET email
+                        </span>
+                        <span class="list-content">
+                            GET endereco
+                        </span>
+                    </span>
+                    <span class="item-container">
+                        <span class="list-title">
+                            <i class="fa-solid fa-wrench"></i>
+                            Serviço
+                        </span>
+                        <span class="list-content">
+                            GET serviço
+                        </span>
+                    </span>
+                    <span class="item-container">
+                        <span class="list-title">
+                            <i class="fa-solid fa-user"></i>
+                            Técnico
+                        </span>
+                        <span class="list-content">
+                            GET técnico
+                        </span>
+                    </span>
+                    <span class="obs-container">
+                        <span class="list-title">Observações</span>
+                        <span class="obs-text">GET observação</span>
+                    </span>
+                    <div class="buttons-container">
+                        <button id="edit-button">
+                            <i class="fa-solid fa-pencil"></i>
+                            Editar
+                        </button>
+                        <button id="delete-button">
+                            <i class="fa-solid fa-trash"></i>
+                            Deletar
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </div>
     </main>
     <script src="../javascript/script.js"></script>
 </body>
