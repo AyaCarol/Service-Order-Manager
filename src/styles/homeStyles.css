@@ -7,7 +7,7 @@
     --text-color-light: #b5b5b5;
     --background: #e3e9f7;
     --subtitle: #374151;
-    
+    --red: #EF4444;
 }
 
 * {
@@ -275,6 +275,18 @@ main {
     color: var(--subtitle);
 }
 
+#calendar-icon, #user-icon{
+    color:var(--subtitle);
+}
+
+#clock-icon{
+    color: #C1AA36;
+}
+
+#check-icon{
+    color: #36C13F;
+}
+
 .table-title{
     font-size: 18px;
     padding: 5px;
@@ -444,6 +456,7 @@ main {
     border-radius: 5px;
     font-weight: 500;
     width: 100%;
+    transition: .5s;
 }
 
 #edit-button:hover{
@@ -452,17 +465,18 @@ main {
 }
 
 #delete-button{
-    background-color: #EF4444;
+    background-color: var(--red);
     color: #fff;
     border: none;
     padding: 10px;
     border-radius: 5px;
     font-weight: 400;
     width: 100%;
+    transition: .5s;
 }
 
 #delete-button:hover{
-    background-color: #9a2c2c;
+    background-color: #8d2724;
     cursor: pointer;
 }
 
@@ -483,5 +497,5 @@ main {
 }
 
 .close-popup:hover{
-    color: #9a2c2c;
+    color: var(--red);
 }
