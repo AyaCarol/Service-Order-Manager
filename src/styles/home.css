@@ -1,5 +1,20 @@
 /* estilização do conteudo principal */
 
+main {
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    padding-left: calc(200px + 20px);
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
 #main-content{
     margin: 20px;
     padding: 20px;
@@ -12,11 +27,22 @@
 .header-left {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .title{
     font-size: 26px;
     font-weight: bold;
+}
+
+.dashboard-title{
+    text-align: center;
+    padding: 10px;
+    font-size: 36px;
+    color: var(--secundary-color);
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .subtitle{
@@ -34,8 +60,8 @@
 }
 
 .header-right{
-    display: flex;
-    position: relative;
+    display: block;
+    width: 15%;
 }
 
 .dash-header{
@@ -44,14 +70,14 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 #os-button{
     display: block;
     text-align: center;
     font-size: 14px;
-    width: 100%;
-    min-width: 90px;
+    min-width: 60px;
     background-color: var(--primary-color);
     color: var(--secundary-color);
     border: none;
@@ -155,7 +181,7 @@
     flex-direction: row;
     gap: 15px;
     justify-content: right;
-    min-width: 25%;
+    min-width: 50%;
 }
 
 .fa-solid{
@@ -373,5 +399,94 @@
 
 .trash:hover{
     color: #bb1d37;
+}
+
+/* ajustando responsividade */
+
+@media (max-width:768px){
+    main{
+        position: relative;
+        padding-left: 80px;
+        
+    }
+
+    .card-container{
+        width: auto;
+        box-sizing: border-box;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .card-title{
+        font-size: 16px;
+    }
+
+    .card-number{
+        font-size: 14x;
+    }
+
+    .card-description{
+        display: none;
+    }
+
+    .table-header{
+        flex-direction: column;
+    }
+
+    .button-text{
+        display: none;
+        width: 0;
+    }
+
+    .header-right{
+        justify-content: space-evenly;
+        gap: 2px;
+    }
+
+    .header-left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }   
+
+    .table-header{
+        display: block;
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+    .table-left{
+        display: block;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .table-right{
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .subtitle{
+        display: none;
+    }
+
+    #os-button{
+        min-width: 20px;
+    }
+
+    .fa-solid{
+        margin: 0;
+    }
+
+    
+
+
+
 }
 

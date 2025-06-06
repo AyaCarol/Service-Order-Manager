@@ -26,22 +26,26 @@
                 <p class="header-right">
                     <a id="os-button" href="createService.html">
                         <i class="fa-solid fa-plus"></i>
-                        Criar Serviço
+                        Cadastrar cliente
                     </a>
                 </p>
             </header>
 
             <div class="table-container">   
                 <table class="so-table">
-                    <tr class="header-row">
-                        <th>ID</th>
-                        <th>Nome do Cliente</th>
-                        <th colspan="3">Descrição do Serviço</th>
-                    </tr>
+                    <thead class="header-row">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
                     <tr class="table-row" onclick="togglePopup()">
                         <td>001</td>
-                        <td>Manutenção</td>
-                        <td>Aplicável em defeitos de equipamentos</td>
+                        <td>Nome1</td>
+                        <td>E-mail1</td>
+                        <td>Telefone1</td>
                         <td class="table-button">
                             <a class="table-btn-link" href="editClient.html">
                                 <i class="fa-solid fa-edit" ></i>
@@ -55,8 +59,9 @@
                     </tr>
                     <tr class="table-row" onclick="togglePopup()">
                         <td>002</td>
-                        <td>Instalação</td>
-                        <td>Aplicável quando cliente solicita serviço novo</td>
+                        <td>Nome2</td>
+                        <td>E-mail2</td>
+                        <td>Telefone2</td>
                         <td class="table-button">
                             <a class="table-btn-link" href="editClient.html">
                                 <i class="fa-solid fa-edit" ></i>

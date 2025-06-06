@@ -77,7 +77,6 @@ a{
     align-items: center;
     font-size: 14px;
     gap: 10px;
-    
 }
 
 .side-item.active {
@@ -135,3 +134,45 @@ a{
     background-color: #173998;
     transition: .3s;
 }
+
+/* adicionando responsividade para a sidebar */
+
+@media (max-width:768px){
+    .item-description{
+        display: none;
+        width: 0;
+    }
+
+    #sidebar{
+        min-width: 10px;
+        align-items: center;
+    }
+
+    #sidebar a.active{
+        border-radius: 90%;
+    }
+
+    .side-item{
+        display: block;
+        padding: 10px;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #side-link{
+        align-items: center;
+
+    }
+
+    .side-item i{
+        margin: 0;
+        padding: 0;
+    }
+
+    #user_avatar {
+        margin-right: 0;
+    }
+
+}   
