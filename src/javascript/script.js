@@ -5,21 +5,22 @@ window.addEventListener('DOMContentLoaded', () => {
       const container = document.getElementById('sidebar-container');
       container.innerHTML = html;
 
-      // Adiciona o CSS
+      // Adiciona o CSS da sidebar
       const link = document.createElement('link');
       link.rel = 'stylesheet';
       link.href = 'css/sidebar.css';
       document.head.appendChild(link);
 
-      // Pega a página atual
-      const currentPage = window.location.pathname.split("/").pop();
-      const sideItems = container.querySelectorAll('.side-item');
+      // Destaque o link ativo
+      const currentPage = window.location.pathname.split("/").pop(); // ex: 'usuarios.html'
+      const links = container.querySelectorAll('a');
 
-      sideItems.forEach(item => {
-        const link = item.querySelector('a');
-        if (link && link.getAttribute('href') === currentPage) {
-          item.classList.add('active');
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
         }
       });
     });
 });
+
+
