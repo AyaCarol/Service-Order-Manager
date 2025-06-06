@@ -8,36 +8,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/login.css">
-    <script src="src/javascript/login.js" defer></script>
+    
     <title>Login - SOM</title>
 </head>
 <body>
-    <main>
-        <div class="login-container" id="login-container">
-            <div class="form-container">
-                <form class="form form-login">
-                    <div class="form-title-text">
-                        <h2 class="form-title">Login</h2>
-                        <p class="form-text">Insira suas credenciais para acessar</p>
-                    </div>
-                    <div class="form-input-container">
-                        <input type="email" class="form-input" placeholder="Email">
-                        <input type="password" class="form-input" placeholder="Senha">
-                    </div>
-                    <a class="form-button" href="src/tabs/home.html">Entrar</a>
-                </form>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="form-section">
+                <h1>Login</h1>
+                <p>Insira suas credenciais para acessar</p>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Digite seu email">
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha">
+
+                <button type="submit">Entrar</button>
             </div>
-            <div class="teste">
-                <div class="overlay-container">
-                    <div class="overlay">
-                        <h2 class="overlay-title">service order manager.</h2>
-                        <p class="overlay-text">Gerencie seu fluxo de trabalho de forma eficiente.</p>
-                    </div>
-                </div>
+
+            <div class="logo-section">
+                <img src="src/images/SOM V1 (BRANCO).png" alt="Service Order Manager Logo">
             </div>
-            
         </div>
-    </main>
+  </div>
 </body>
 </html>
 
